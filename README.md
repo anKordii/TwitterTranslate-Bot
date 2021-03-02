@@ -5,8 +5,8 @@
 
 
 # 📝 Changelog 
-0.1.1:
-- Dodano plik konfiguracyjny
+0.2:
+- Tłumaczenie odpowiedzi do tweeta a nie samych tweetów
 
 # ⏰ Nadchodzące zmiany
 - 
@@ -27,4 +27,6 @@ Prosty bot do automatycznego odpisywania na tweety w innych językach.
 
 ![example](https://i.imgur.com/Gy1HW3p.png)
 
+# 💡Tip
 ID konta można znaleźć na https://codeofaninja.com/tools/find-twitter-id/
+Jeśli chcesz żeby bot działał 24h/7 zainstaluj ' npm install -g forever ' następnie wpisz ' forever start twittertranslate.js '

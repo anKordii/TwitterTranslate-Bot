@@ -25,6 +25,14 @@ stream.on('tweet', function (tweet, err) {
         }else{
             reply(tweet.extended_tweet.full_text, tweet.id_str, tweet.user.screen_name)
         }
+    }else{
+        if(tweet.user.screen_name == globalConfig.TwitterUsername){
+            if(!tweet.extended_tweet){
+                reply(tweet.text, tweet.id_str, tweet.user.screen_name)
+            }else{
+                reply(tweet.extended_tweet.full_text, tweet.id_str, tweet.user.screen_name)
+            }
+        }
     }
 })
 
@@ -35,7 +43,7 @@ function reply(text, id_str, screen_name){
     // Domyślny var
     //
     var res = {
-        status: `${res.text}\n\n@${screen_name}\nBot v0.1.1`,
+        status: `${res.text}\n\n@${screen_name}\nBot v0.2`,
         in_reply_to_status_id: '' + id_str
     };
     
