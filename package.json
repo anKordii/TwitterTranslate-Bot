@@ -1,0 +1,17 @@
+{
+  "name": "twittertranslate",
+  "version": "0.1.1",
+  "description": "Bot do automatycznego odpisywania na tweety w różnych językach",
+  "main": "twittertranslate.js",
+  "license": "MIT",
+  "author": "3xanax",
+  "keywords": [
+    "translate",
+    "twitter",
+    "bot"
+  ],
+  "dependencies": {
+    "twit": "^2.2.11",
+    "@iamtraction/google-translate": "^1.1.2"
+  }
+}
