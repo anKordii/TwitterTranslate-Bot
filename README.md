@@ -1,7 +1,7 @@
 # TwitterTranslate-Bot
  Bot do automatycznego odpisywania na tweety w różnych językach 😎🤙
 
-![JavaScript](https://img.shields.io/badge/JavaScript-PogChamp-yellow)
+![NodeJS](https://img.shields.io/badge/NodeJS-PogChamp-lime)
 
 
 # 📝 Changelog 
