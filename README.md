@@ -24,4 +24,6 @@ Prosty bot do automatycznego odpisywania na tweety w innych językach.
 - Wybierz język oraz konto które bot ma śledzić
 - Uruchom skrypt komendą ' node twittertranslate.js '
 
+![example](https://i.imgur.com/Gy1HW3p.png)
+
 ID konta można znaleźć na https://codeofaninja.com/tools/find-twitter-id/
