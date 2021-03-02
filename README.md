@@ -22,6 +22,7 @@ Prosty bot do automatycznego odpisywania na tweety w innych językach.
 - Wygeneruj klucze Access token & secret
 - Wpisz klucze do pliku konfiguracyjnego który znajduje się w /config/config.js
 - Wybierz język oraz konto które bot ma śledzić
+- Wpisz komende ' npm install '
 - Uruchom skrypt komendą ' node twittertranslate.js '
 
 ![example](https://i.imgur.com/Gy1HW3p.png)
