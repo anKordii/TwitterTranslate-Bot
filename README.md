@@ -5,8 +5,8 @@
 
 
 # 📝 Changelog 
-0.2:
-- Tłumaczenie odpowiedzi do tweeta a nie samych tweetów
+v0.2.1:
+- Nie odpowiada już na retweety bez tekstu
 
 # ⏰ Nadchodzące zmiany
 - 

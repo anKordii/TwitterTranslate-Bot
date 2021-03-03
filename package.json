@@ -1,6 +1,6 @@
 {
   "name": "twittertranslate",
-  "version": "0.2",
+  "version": "0.2.1",
   "description": "Bot do automatycznego odpisywania na tweety w różnych językach",
   "main": "twittertranslate.js",
   "license": "MIT",

@@ -20,17 +20,22 @@ stream.on('tweet', function (tweet, err) {
     //console.log(tweet)
     if(tweet.in_reply_to_status_id === null && tweet.user.screen_name == globalConfig.TwitterUsername){
 
-        if(!tweet.extended_tweet){
-            reply(tweet.text, tweet.id_str, tweet.user.screen_name)
-        }else{
-            reply(tweet.extended_tweet.full_text, tweet.id_str, tweet.user.screen_name)
-        }
-    }else{
-        if(tweet.user.screen_name == globalConfig.TwitterUsername){
+        if(tweet.text.startsWith('RT') === false && !tweet.retweet_count <= 0){
             if(!tweet.extended_tweet){
                 reply(tweet.text, tweet.id_str, tweet.user.screen_name)
             }else{
                 reply(tweet.extended_tweet.full_text, tweet.id_str, tweet.user.screen_name)
+            }
+        }
+    }else{
+        if(tweet.user.screen_name == globalConfig.TwitterUsername){
+            
+            if(tweet.text.startsWith('RT') === false && !tweet.retweet_count <= 0){
+                if(!tweet.extended_tweet){
+                    reply(tweet.text, tweet.id_str, tweet.user.screen_name)
+                }else{
+                    reply(tweet.extended_tweet.full_text, tweet.id_str, tweet.user.screen_name)
+                }
             }
         }
     }
@@ -43,7 +48,7 @@ function reply(text, id_str, screen_name){
     // Domyślny var
     //
     var res = {
-        status: `${res.text}\n\n@${screen_name}\nBot v0.2`,
+        status: `${res.text}\n\n@${screen_name} ⭐ Bot v0.2.1`,
         in_reply_to_status_id: '' + id_str
     };
     
