@@ -7,7 +7,8 @@
 
 # 📝 Changelog 
 v0.3:
-- Wprowadzenie komendy `!sleep` - usypia tłumaczenie komentarzy
+- Wprowadzenie komendy `!sleep` - usypia tłumaczenie komentarzy na 10 minut
+- Wprowadzenie komendy `!status` - pokazują aktualny status tłumaczenia komentarzy
 
 # ⏰ Nadchodzące zmiany
 - Wydanie aplikacji Windows z botem
