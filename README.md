@@ -6,8 +6,8 @@
 <a href="https://www.buymeacoffee.com/3xanax" target="_blank"><img src="https://i.imgur.com/D4cMvm7.png" alt="Buy Me A Coffee"></a>
 
 # 📝 Changelog 
-v0.2.2:
-- Naprawiono błąd z uznawaniem każdego tweeta za RT bez tekstu
+v0.3:
+- Wprowadzenie komendy `!sleep` - usypia tłumaczenie komentarzy
 
 # ⏰ Nadchodzące zmiany
 - Wydanie aplikacji Windows z botem

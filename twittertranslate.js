@@ -10,11 +10,11 @@ var T = new Twit({
   timeout_ms:           10*1000,  // optional HTTP request timeout to apply to all requests.
   strictSSL:            true,     // optional - requires SSL certificates to be valid.
 })
-
+var sleepStatus = false;
 console.log(`» Załadowano skrypt twittertranslate.js [${getActualTime()}]`)
 
 //Twitter
-var stream = T.stream('statuses/filter', { follow : [globalConfig.TwitterID] });
+var stream = T.stream('statuses/filter', { follow : [globalConfig.TwitterID, globalConfig.AdminTwitterID] });
 
 stream.on('tweet', function (tweet, err) {
     //console.log(tweet)
@@ -29,7 +29,25 @@ stream.on('tweet', function (tweet, err) {
                 reply(tweet.extended_tweet.full_text, tweet.id_str, tweet.user.screen_name)
             }
         }
+    }else if(tweet.user.screen_name == globalConfig.AdminTwitterUsername){
+        if(tweet.text === '!sleep'){
+            goSleep()
+        }else if(tweet.text === '!status'){
+
+            var res = {
+                status: `Aktualny status sleep: ${sleepStatus} @${tweet.user.screen_name}`,
+                in_reply_to_status_id: '' + tweet.id_str
+            };
+
+            T.post('statuses/update', res,
+                function(err, data, response) {
+                }
+            );
+        }
+
     }else{
+        if(sleepStatus === true) return;
+
         if(tweet.user.screen_name == globalConfig.TwitterUsername){
             
             if(tweet.retweet_count > 0) return;
@@ -44,7 +62,15 @@ stream.on('tweet', function (tweet, err) {
         }
     }
 })
+function goSleep(){
+    if(sleepStatus === false){
+        sleepStatus = true
 
+        setTimeout(() => {
+            sleepStatus = false
+        }, 15 * 60 * 1000);
+    }
+}
 function reply(text, id_str, screen_name){
 
     translate(text, { from: globalConfig.from, to: globalConfig.to }).then(res => {
@@ -52,7 +78,7 @@ function reply(text, id_str, screen_name){
     // Domyślny var
     //
     var res = {
-        status: `${res.text}\n\n@${screen_name} ⭐ Bot v0.2.2`,
+        status: `${res.text}  @${screen_name}`,
         in_reply_to_status_id: '' + id_str
     };
     
