@@ -22,11 +22,11 @@ Prosty bot do automatycznego odpisywania na tweety w innych językach.
 - Wygeneruj klucze Access token & secret
 - Wpisz klucze do pliku konfiguracyjnego który znajduje się w /config/config.js
 - Wybierz język oraz konto które bot ma śledzić
-- Wpisz komende ' npm install '
-- Uruchom skrypt komendą ' node twittertranslate.js '
+- Wpisz komende `npm install`
+- Uruchom skrypt komendą `node twittertranslate.js`
 
 ![example](https://i.imgur.com/Gy1HW3p.png)
 
 # 💡Tip
 - ID konta można znaleźć na https://codeofaninja.com/tools/find-twitter-id/
-- Jeśli chcesz żeby bot działał 24h/7 zainstaluj ' npm install -g forever ' następnie wpisz ' forever start twittertranslate.js '
+- Jeśli chcesz żeby bot działał 24h/7 zainstaluj `npm install -g forever` następnie wpisz `forever start twittertranslate.js`
