@@ -1,8 +1,11 @@
 {
   "name": "twittertranslate",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Bot do automatycznego odpisywania na tweety w różnych językach",
   "main": "twittertranslate.js",
+  "scripts": {
+    "start": "node twittertranslate.js"
+  },
   "license": "MIT",
   "author": "3xanax",
   "keywords": [

@@ -6,11 +6,11 @@
 <a href="https://www.buymeacoffee.com/3xanax" target="_blank"><img src="https://i.imgur.com/D4cMvm7.png" alt="Buy Me A Coffee"></a>
 
 # 📝 Changelog 
-v0.2.1:
-- Nie odpowiada już na retweety bez tekstu
+v0.2.2:
+- Naprawiono błąd z uznawaniem każdego tweeta za RT bez tekstu
 
 # ⏰ Nadchodzące zmiany
-- 
+- Wydanie aplikacji Windows z botem
 
 # 🧐 Opis
 Prosty bot do automatycznego odpisywania na tweety w innych językach.
@@ -24,7 +24,7 @@ Prosty bot do automatycznego odpisywania na tweety w innych językach.
 - Wpisz klucze do pliku konfiguracyjnego który znajduje się w /config/config.js
 - Wybierz język oraz konto które bot ma śledzić
 - Wpisz komende `npm install`
-- Uruchom skrypt komendą `node twittertranslate.js`
+- Uruchom skrypt komendą `npm start`
 
 ![example](https://i.imgur.com/Gy1HW3p.png)
 

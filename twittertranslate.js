@@ -20,7 +20,9 @@ stream.on('tweet', function (tweet, err) {
     //console.log(tweet)
     if(tweet.in_reply_to_status_id === null && tweet.user.screen_name == globalConfig.TwitterUsername){
 
-        if(tweet.text.startsWith('RT') === false && !tweet.retweet_count <= 0){
+        if(tweet.retweet_count > 0) return;
+
+        if(tweet.text.startsWith('RT') === false){
             if(!tweet.extended_tweet){
                 reply(tweet.text, tweet.id_str, tweet.user.screen_name)
             }else{
@@ -30,7 +32,9 @@ stream.on('tweet', function (tweet, err) {
     }else{
         if(tweet.user.screen_name == globalConfig.TwitterUsername){
             
-            if(tweet.text.startsWith('RT') === false && !tweet.retweet_count <= 0){
+            if(tweet.retweet_count > 0) return;
+
+            if(tweet.text.startsWith('RT') === false){
                 if(!tweet.extended_tweet){
                     reply(tweet.text, tweet.id_str, tweet.user.screen_name)
                 }else{
@@ -48,7 +52,7 @@ function reply(text, id_str, screen_name){
     // Domyślny var
     //
     var res = {
-        status: `${res.text}\n\n@${screen_name} ⭐ Bot v0.2.1`,
+        status: `${res.text}\n\n@${screen_name} ⭐ Bot v0.2.2`,
         in_reply_to_status_id: '' + id_str
     };
     
